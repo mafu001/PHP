@@ -16,7 +16,7 @@ echo PHP_EOL;
 
 
 
-//FIBONACCI SERIES WITH CURSIVE FUNCTION
+//FIBONACCI SERIES WITH RECURSIVE FUNCTION
 function fibonacci($old, $new, $start, $end) {
     if($start > $end) {
         return;
@@ -39,7 +39,7 @@ echo PHP_EOL;
 
 
 
-//FIBONACCI SERIES WITH CURSIVE FUNCTION and STATIC SCOPE
+//FIBONACCI SERIES WITH RECURSIVE FUNCTION and STATIC SCOPE
 function fibonacci2($old, $new, $end) {
     static $start;  //static scope
     $start = $start ?? 1;
