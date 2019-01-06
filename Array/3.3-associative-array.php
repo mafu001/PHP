@@ -21,7 +21,7 @@ $countStudents = count($students);
 
 
 //array with foreach loop
-foreach($students as $key => $value) {
+foreach($students as $key => $value) {  //it works as iterator and iterate all values
     echo "that key is: " . $key . " and value: ". $value . "\n";
 }
 echo PHP_EOL;
