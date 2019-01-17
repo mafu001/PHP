@@ -2,7 +2,7 @@
 
 //INHERITANCE WITH EXTENDS
 class Animal {
-    protected $name; //protected will be use by other class but private will be not
+    protected $name; //protected will be use by extends class but private will be not
 
     function __construct($toName) {
         $this -> name = $toName;
@@ -20,10 +20,15 @@ class Animal {
     }
 
     function say() {}
+
+    protected function preName($title) {
+    	$this -> name = $title . " " . $this -> name; // this is so important
+    }
 }
 
 class Human extends Animal {
     function say() {
+    	$this -> preName("mr.");
         echo "{$this -> name} says hi \n";
     }
 }
@@ -40,3 +45,10 @@ $cat = new Cat("pushi");
 $man -> sleep(); //inheritance
 $man -> say(); //extends
 $cat -> say();
+
+echo PHP_EOL;
+
+$man -> say(); 
+$man -> sleep(); //difference from upper
+$cat -> say();
+
